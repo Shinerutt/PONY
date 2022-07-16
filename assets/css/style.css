@@ -1,0 +1,64 @@
+* {margin: 0px; padding:0px}
+
+header {text-align: center; border-bottom: 10px solid #1C2654;}
+header img{
+    margin: 20px 0px 10px;
+}
+
+#menu {
+    margin-top: 25px;
+}
+.container{
+    /* background: red;
+     */
+     max-width: 95%;
+     margin: auto;
+}
+
+.hero {
+    margin-top: 10px;
+}
+.hero img{
+    width: 100%;
+    
+}
+
+/*Intro Section*/
+#intro{
+    width: 100%;
+    /* margin: 2rem 0px */
+}
+
+#intro + p {
+    margin: 2rem 0px
+}
+
+/*Products Section*/
+.product {width: 46%; float: left; overflow-x: hidden;}
+.product img {width: 100%;}
+.product:nth-child(odd) {
+    margin-right: 4%;
+}
+
+.product_color {
+    width: 100%; 
+    float: left;    
+    margin-bottom: 2rem;       
+    min-height: 62px; 
+}
+
+.product_price {
+    color: #808080;
+    font-family: 'Varta';
+    width: 100%;
+    float: left;            
+}
+
+.product_color .color li {width: 23px; height: 23px; ; box-shadow: 1px 2px 3px silver; float:left; margin: 8px; margin-left: 0px; margin-bottom: 0px; list-style: none;}
+
+
+@media screen and (min-width: 800px ) {
+    header{ text-align: left;}
+    #menu {display: none;}
+    
+}

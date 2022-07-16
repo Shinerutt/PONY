@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varta&display=swap');
+
+
+h2,h4{
+    font-family: 'Bebas Neue', cursive;
+}
+
+p{
+    font-family: 'Varta', sans-serif;
+    line-height: 28px;
+}
+
+
+/*Divider*/
+.divider {
+    display: flex;
+}
+.divider:before, .divider:after {
+    content: "";
+    flex: 4;
+}
+
+.smalldivider {
+    display: flex;
+}
+
+.smalldivider::after{
+    content: "";
+    flex: 1
+}
+
+.smallline {
+    align-items: center;
+    
+}
+.smallline:after {
+    margin-left: 1em
+}
+.line {
+    align-items: center;
+    margin: auto;
+    width: 80%;
+    letter-spacing: 1px;
+    color: #1C2654;
+    margin:2rem auto;
+}
+.line:before, .line:after {
+    margin: 0 1em;
+}
+.one-line:before, .one-line:after {
+    background: #1C2654;
+    height: 4px;
+}
+
+/* Color */
+.white {background: #D9D9D9 }
+.blue {background: #246AB6 ;}
+.black{background: #0D0D0D;}
+.red{background: #EE4949;}
+.mint{background: #66A2A9;}
+.gray{background: #8A837F;}
+.navy{background: #082C53;}
