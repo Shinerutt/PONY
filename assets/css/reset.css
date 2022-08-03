@@ -63,3 +63,10 @@ p,a{
 .mint{background: #66A2A9;}
 .gray{background: #8A837F;}
 .navy{background: #082C53;}
+.darknavy {background: #30384B}
+.black-silver{background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 50%, rgba(225,225,225,1) 50%, rgba(225,225,225,1) 100%);}
+.black-vanilla{background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 50%, rgba(255,209,172,1) 50%, rgba(255,209,172,1) 100%);}
+.vanilla-black{background: linear-gradient(270deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 50%, rgba(237,197,152,1) 50%, rgba(237,197,152,1) 100%);}
+.silver-vanilla{background: linear-gradient(90deg, rgba(226,226,226,1) 0%, rgba(226,226,226,1) 50%, rgba(237,197,152,1) 50%, rgba(237,197,152,1) 100%);}
+.red-white{background: linear-gradient(90deg, rgba(238,73,73,1) 0%, rgba(238,73,73,1) 50%, rgba(252,252,252,1) 50%, rgba(252,252,252,1) 100%);}
+.pink-white{background: linear-gradient(90deg, rgba(255,192,203,1) 0%, rgba(255,192,203,1) 50%, rgba(252,252,252,1) 50%, rgba(252,252,252,1) 100%);}

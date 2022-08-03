@@ -38,7 +38,7 @@
 
     <!--About Section-->
     <section class="about">
-        <h2 class="divider line one-line" >ABOUT</h2>
+        <h2 class="divider start line one-line" >ABOUT</h2>
         <div class="container">
             
             <img id="intro"src="assets/img/Intro.jpg">
@@ -48,26 +48,30 @@
 
     <!-- Products -->
     <section class="products">
-        <h2 class="divider line one-line" >PRODUCTS</h2>
-        <div class="container" style="overflow:auto">
-            
-                <div class="product">
-                    <img src="assets/img/products/top_star_ox_stripe.jpg" >
-                    <h4 class="smalldivider smallline one-line">Top Star Ox Stripe</h4>
-                    <div class="product_attr">
-                        <div class="product_color">
-                            <ul class="color">
-                                <li class="white"></li>
-                            </ul>
-                        </div>
-                        <div class="product_price">
-                            1,300 THB
+        <h2 class="divider end line one-line" >PRODUCTS</h2>
+        <div class="container" style="overflow:hidden">
+            <div class="product-slider">
+                <div>
+                    <div class="product">
+                        <img src="assets/img/products/top_star_ox_stripe.jpg" >
+                        <h4 class="smalldivider smallline one-line">Top Star Ox Stripe</h4>
+                        <div class="product_attr">
+                            <div class="product_color">
+                                <ul class="color">
+                                    <li class="white"></li>
+                                </ul>
+                            </div>
+                            <div class="product_price">
+                                1,400 THB
+                            </div>
                         </div>
                     </div>
+
                 </div>
+               <div>
                 <div class="product">
                     <img src="assets/img/products/shooter_ox.jpg" >
-                    <h4 class="smalldivider smallline one-line">Shoter OX</h4>
+                    <h4 class="smalldivider smallline one-line">Shooter OX</h4>
                     <div class="product_attr">
                         <div class="product_color">
                             <ul class="color">
@@ -80,23 +84,111 @@
                             </ul>
                         </div>
                         <div class="product_price">
-                            1,300 THB
+                            1,200 THB
                         </div>
                     </div>
                 </div>
-            
-            
+               </div>
+                <div>
+                    <div class="product">
+                        <img src="assets/img/products/shooter_hi.jpg" >
+                        <h4 class="smalldivider smallline one-line">Shooter Hi</h4>
+                        <div class="product_attr">
+                            <div class="product_color">
+                                <ul class="color">
+                                    <li class="black-silver"></li>
+                                    <li class="black-vanilla"></li>
+                                    <li class="vanilla-black"></li>
+                                    <li class="silver-vanilla"></li>
+                                    <li class="red-white"></li>
+                                    <li class="pink-white"></li>
+                                </ul>
+                            </div>
+                            <div class="product_price">
+                                1,300 THB
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                
+               <div>
+                <div class="product">
+                    <img src="assets/img/products/slamdunk.jpg" >
+                    <h4 class="smalldivider smallline one-line">Slamdunk Vintage</h4>
+                    <div class="product_attr">
+                        <div class="product_color">
+                            <ul class="color">
+                                <li class="darknavy"></li>
+                                <li class="black"></li>
+                            </ul>
+                        </div>
+                        <div class="product_price">
+                            2,650 THB
+                        </div>
+                    </div>
+                </div> 
+               </div>
+            </div> <!---End of product silder-->
         </div>
     </section>
     <!-- Gallery -->
     <br><br>
     <section id="gallery">
-        <h2 class="divider line one-line">GALLERY</h2>
+        <h2 class="divider start line one-line">GALLERY</h2>
         <div class="container">
-                <div class="slider">
+            <!--Mobile Slider-->
+                <!-- <div class="slider">
                     <img src="assets/img/gallery/pony_7.jpg" alt="" >
                     <img src="assets/img/gallery/pony_0.jpg" alt="">
+                    <img src="assets/img/gallery/pony_1.jpg" alt="">
+                    <img src="assets/img/gallery/pony_8.jpg" alt="">
+                    <img src="assets/img/gallery/pony_3.jpg" alt="">
+                    <img src="assets/img/gallery/pony_4.jpg" alt="">
+                    <img src="assets/img/gallery/pony_5.jpg" alt="">
+                    <img src="assets/img/gallery/pony_6.jpg" alt="">
+                </div> -->
+                <!--Desktop-->
+
+                <style>
+                    .grid-container { display: grid;
+  grid-template-columns: auto auto auto auto;}
+
+  .grid-container div {
+
+    padding: 1rem; 
+
+  }
+                </style>
+                <div id="desktopgallery" class="grid-container">
+                    <div>
+                        <img src="assets/img/gallery/pony_7.jpg" alt="" >
+                    </div>
+                    <div>
+                        <img src="assets/img/gallery/pony_0.jpg" alt="">
+                    </div>
+                    <div>
+                        <img src="assets/img/gallery/pony_1.jpg" alt="">
+                    </div>
+                    <div>
+                        <img src="assets/img/gallery/pony_8.jpg" alt="">
+                    </div>
+                    <div>
+                        <img src="assets/img/gallery/pony_3.jpg" alt="">
+                    </div>
+                    <div>
+                        <img src="assets/img/gallery/pony_4.jpg" alt="">
+                    </div>
+                    <div>
+                        <img src="assets/img/gallery/pony_5.jpg" alt="">
+                    </div>
+                    <div>
+                        <img src="assets/img/gallery/pony_6.jpg" alt="">
+                    </div>
+                    
                 </div>
+
+
         </div>
     </section>
     <!-- Footer -->
@@ -131,7 +223,35 @@
 
     <script>
         $('.slider').slick({
-            dots: true
+            slidesToShow: 8,
+            rows: 2,
+            // adaptiveHeight: true,
+            responsive: [{
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: true,
+                    rows: 1,
+                }
+            }]
+        });
+
+        $('.product-slider').slick({
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            dots: true,
+            responsive: [
+                {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    infinite: true,
+                }
+                }]
+
         });
     </script>
 

@@ -42,7 +42,9 @@ header img{
 }
 
 /*Products Section*/
-.product {width: 46%; float: left; overflow-x: hidden;}
+.product {
+    /* width: 46%; */
+     float: left; overflow-x: hidden;}
 .product img {width: 100%;}
 .product:nth-child(odd) {
     margin-right: 4%;
@@ -59,7 +61,8 @@ header img{
     color: #808080;
     font-family: 'Varta';
     width: 100%;
-    float: left;            
+    float: left;   
+    font-weight: bold;         
 }
 
 .product_color .color li {width: 23px; height: 23px; ; box-shadow: 1px 2px 3px silver; float:left; margin: 8px; margin-left: 0px; margin-bottom: 0px; list-style: none;}
@@ -108,6 +111,8 @@ footer h2{
     margin-bottom: 5px;
 }
 
+
+
 /*Nav*/
 nav {width:500px; margin:auto; text-align: center; padding-top: 30px; font-size: 2em; display: none;}
 nav a {font-family: 'Bebas Neue', cursive; text-decoration: none; font-size: 30px !important; margin:1.5rem; color:black}
@@ -115,26 +120,78 @@ nav a {font-family: 'Bebas Neue', cursive; text-decoration: none; font-size: 30p
 
 #intro + p b {font-size: 1.5rem;}
 
+/*Slider*/
+/* .slick-slider {overflow: hidden;} */
+
 @media screen and (min-width: 768px ) {
     header{ text-align: left;}
     #hamburger-menu {display: none;}
     nav {display: block;}
     .logo {float:left}
-    .divider:before {
-        content: "" !important; 
-        flex: 0 !important;
-    }
+
     .divider {
         font-size: 2em;
     }
+
+    /*Make Word align left*/
+    .start.divider:before {
+        content: "" !important; 
+        flex: 0 !important;
+    }
+
+    /*Make Word align right*/
+    
+    .end.divider:after {
+        content: "" !important;
+        flex: 0 !important;
+    }
+    .about{
+        overflow: auto;
+        margin-bottom: 50px;
+    }
+
+    /*Product Section*/
+    .product:nth-child(odd){
+        margin-right: 0px;
+    }
+
+    .product {
+        margin: 0px 25px;
+        /* margin-right: 50px !important; */
+        /* width: 22%;
+        margin: 2%; */
+    }
+
+    .slick-slide .product{
+        /* margin-left:25px; */
+        margin: 0px 10%;
+    }
+
+    .slick-slide:first-child .product{
+        /* margin-left: 0px; */
+        /* left: 0px;
+        background: red; */
+    }
+    .container {
+        max-width: 1200px;
+    }
+   
 
     #intro {max-width: 400px; float: left; margin-right: 2rem}
     #intro + p { padding-top: 12vw; line-height: 30px;}
     /* #intro + p { padding-top: 2rem;} */
     /* #intro + p {float:left} */
+
+
+    .slider img {width: 300px !important}
 }
 
 @media screen and (min-width: 992px) {
     #intro + p {padding-top: 1vw; font-size: 1.8em; line-height: 50px;}
     #intro + p b {font-size: 2.2rem;}
+}
+
+@media screen and (min-width: 1200px) {
+    .product_color, .product_price {width: 50%}
+    .product_price {text-align: right;}
 }
