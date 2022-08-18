@@ -1,5 +1,8 @@
 * {margin: 0px; padding:0px}
-body { overflow-x: hidden;}
+html {scroll-behavior: smooth;}
+body { overflow-x: hidden; }
+
+
 
 header {text-align: center; border-bottom: 10px solid #1C2654; overflow: auto; margin-bottom: 1rem;}
 
@@ -75,10 +78,15 @@ header img{
     width: 100%;
 }
 
+/*Desktop slider*/
+.grid-container { display: grid; grid-template-columns: auto auto auto auto;}
+.grid-container div { padding: 1rem; }
+
 /*Footer*/
 footer{
     background: #1C2654;
     color: white;
+    margin-top: 128px;
     padding-bottom: 3rem;
 }
 
@@ -99,7 +107,10 @@ footer i{
     margin-right: 5px
 }
 
-footer div.container div:nth-child(1) {
+/* footer div.container div:nth-child(1) {
+    padding:2rem 0px 4rem
+} */
+footer div.container div{
     padding:2rem 0px 4rem
 }
 
@@ -122,16 +133,19 @@ nav a {font-family: 'Bebas Neue', cursive; text-decoration: none; font-size: 30p
 
 /*Slider*/
 /* .slick-slider {overflow: hidden;} */
+#desktopslider {display: none;}
 
 @media screen and (min-width: 768px ) {
     header{ text-align: left;}
-    #hamburger-menu {display: none;}
-    nav {display: block;}
-    .logo {float:left}
+    footer > div {display: flex;}
+    footer div div{width:33%}
 
-    .divider {
-        font-size: 2em;
-    }
+    #hamburger-menu, #mobileslider {display: none;}
+    
+    nav {display: block;}
+    #desktopslider {display: grid;}
+    .logo {float:left}
+    .divider { font-size: 2em;}
 
     /*Make Word align left*/
     .start.divider:before {

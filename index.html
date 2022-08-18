@@ -17,7 +17,14 @@
 
     <!--Bootstrap Icon-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.9.1/font/bootstrap-icons.min.css">
+    <!--Fancybox (ligthbox)-->
+    <!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script> -->
+    <!-- 
+        
+     -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.js"></script>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.css">
 </head>
 <body>
     <header>
@@ -25,9 +32,9 @@
             <img class="logo" src="assets/img/logo.png">    
             <img id="hamburger-menu" src="assets/css/bar.svg">
             <nav>
-                <a href="#">about</a> /
-                <a href="#">product</a> /
-                <a href="#">gallery</a>
+                <a href="#about">about</a> /
+                <a href="#product">product</a> /
+                <a href="#gallery">gallery</a>
             </nav>
         </div> 
     </header>
@@ -37,7 +44,7 @@
     </section>
 
     <!--About Section-->
-    <section class="about">
+    <section id="about" class="about">
         <h2 class="divider start line one-line" >ABOUT</h2>
         <div class="container">
             
@@ -47,7 +54,8 @@
     </section>
 
     <!-- Products -->
-    <section class="products">
+    <section id="product" class="products">
+        <br>
         <h2 class="divider end line one-line" >PRODUCTS</h2>
         <div class="container" style="overflow:hidden">
             <div class="product-slider">
@@ -134,11 +142,16 @@
     </section>
     <!-- Gallery -->
     <br><br>
+
+    <style>
+        #mobileslider img {width:200px}
+    </style>
     <section id="gallery">
+        <br>
         <h2 class="divider start line one-line">GALLERY</h2>
         <div class="container">
             <!--Mobile Slider-->
-                <!-- <div class="slider">
+                <div id="mobileslider" class="slider">
                     <img src="assets/img/gallery/pony_7.jpg" alt="" >
                     <img src="assets/img/gallery/pony_0.jpg" alt="">
                     <img src="assets/img/gallery/pony_1.jpg" alt="">
@@ -147,95 +160,52 @@
                     <img src="assets/img/gallery/pony_4.jpg" alt="">
                     <img src="assets/img/gallery/pony_5.jpg" alt="">
                     <img src="assets/img/gallery/pony_6.jpg" alt="">
-                </div> -->
-                <!--Desktop-->
-
-                <style>
-                    .grid-container { display: grid;
-  grid-template-columns: auto auto auto auto;}
-
-  .grid-container div {
-
-    padding: 1rem; 
-
-  }
-                </style>
-                <div id="desktopgallery" class="grid-container">
-                    <div>
-                        <img src="assets/img/gallery/pony_7.jpg" alt="" >
-                    </div>
-                    <div>
-                        <img src="assets/img/gallery/pony_0.jpg" alt="">
-                    </div>
-                    <div>
-                        <img src="assets/img/gallery/pony_1.jpg" alt="">
-                    </div>
-                    <div>
-                        <img src="assets/img/gallery/pony_8.jpg" alt="">
-                    </div>
-                    <div>
-                        <img src="assets/img/gallery/pony_3.jpg" alt="">
-                    </div>
-                    <div>
-                        <img src="assets/img/gallery/pony_4.jpg" alt="">
-                    </div>
-                    <div>
-                        <img src="assets/img/gallery/pony_5.jpg" alt="">
-                    </div>
-                    <div>
-                        <img src="assets/img/gallery/pony_6.jpg" alt="">
-                    </div>
-                    
                 </div>
-
-
+                <!--Desktop-->                
+                <div id="desktopslider" class="grid-container">
+                    <div><a href="assets/img/gallery/pony_7.jpg" data-fancybox="gallery"><img src="assets/img/gallery/pony_7.jpg" alt="" ></a></div>
+                    <div><a href="assets/img/gallery/pony_0.jpg" data-fancybox="gallery"><img src="assets/img/gallery/pony_0.jpg" alt=""></a></div>
+                    <div><a href="assets/img/gallery/pony_1.jpg" data-fancybox="gallery"><img src="assets/img/gallery/pony_1.jpg" alt=""></a></div>
+                    <div><a href="assets/img/gallery/pony_8.jpg" data-fancybox="gallery"><img src="assets/img/gallery/pony_8.jpg" alt=""></a></div>
+                    <div><a href="assets/img/gallery/pony_3.jpg" data-fancybox="gallery"><img src="assets/img/gallery/pony_3.jpg" alt=""></a></div>
+                    <div><a href="assets/img/gallery/pony_4.jpg" data-fancybox="gallery"><img src="assets/img/gallery/pony_4.jpg" alt=""></a></div>
+                    <div><a href="assets/img/gallery/pony_5.jpg" data-fancybox="gallery"><img src="assets/img/gallery/pony_5.jpg" alt=""></a></div>
+                    <div><a href="assets/img/gallery/pony_6.jpg" data-fancybox="gallery"><img src="assets/img/gallery/pony_6.jpg" alt=""></a></div>
+                </div>
         </div>
     </section>
-    <!-- Footer -->
+
+    <!-- Footer -->  
 
     <style>
        
     </style>
-
     <footer>
         <div class="container">
             <div>
-                <img src="assets/img/logo-white.png" class="logo">
-                <p>© Copy Right 2022  Designed by Shinerut & Natatum</p>
+                <img src="assets/img/logo-white.png" class="logo" style="float:none">
+                <p>© Copy Right 2022 <br> Designed by Shinerut & Natatum</p>
             </div>
-           
             <div>
                 <h2>Navigation</h2>
-                <a href="#">ABOUT</a>
-                <a href="#">PRODUCTS</a>
-                <a href="#">GALLERY</a>
+                <a href="#about">ABOUT</a>
+                <a href="#product">PRODUCTS</a>
+                <a href="#gallery">GALLERY</a>
             </div>
-          
-            <h2>FOLLOW US </h2>  
-            <i class="bi bi-facebook"></i>
-            <i class="bi bi-instagram"></i>
-            <i class="bi bi-youtube"></i>
-         
-        
+            <div>
+                <h2>FOLLOW US </h2>  
+                <i class="bi bi-facebook"></i>
+                <i class="bi bi-instagram"></i>
+                <i class="bi bi-youtube"></i>
+            </div>
         </div>
 
     </footer>
 
     <script>
-        $('.slider').slick({
-            slidesToShow: 8,
-            rows: 2,
-            // adaptiveHeight: true,
-            responsive: [{
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    infinite: true,
-                    dots: true,
-                    rows: 1,
-                }
-            }]
+        $('#mobileslider').slick({
+            slidesToShow: 1,
+            dots: true
         });
 
         $('.product-slider').slick({
